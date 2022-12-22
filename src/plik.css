@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Times New Roman, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("teslab.jpg");
+  background-color: #B0C4DE;
+  padding: 20px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Container for flexboxes */
+section {
+  display: flex;
+
+}
+
+/* Style the navigation menu */
+nav {
+  flex: 1;
+  background: #ADD8E6;
+  font-size: 14pt;
+  text-align:center;
+  font-color: black;
+  padding: 15px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+
+/* Style the content */
+article {
+  flex: 3;
+  background-color: #E6E6FA;
+  padding: 10px;
+}
+
+
+/* Style the footer */
+footer {
+  background-color: #B0C4DE;
+  padding: 12px;
+  text-align: center;
+  color: black;
+}
+
+
+
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}

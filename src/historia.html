@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>historia robotów</title>
+    <link rel="stylesheet" href="plik1.css" >
+</head>
+<script>
+  function czas() {
+    if (!document.write)
+
+      var godzina, minuty, sekundy, dzien, licz_dzien, miesiac, dzisiaj, rok, tekst_miesiac, tekst_dzien;
+    dzisiaj = new Date();
+    godzina=dzisiaj.getHours();
+    minuty=dzisiaj.getMinutes();
+    sekundy=dzisiaj.getSeconds();
+    rok=dzisiaj.getFullYear();
+    dzien=dzisiaj.getDate();
+    licz_dzien=dzisiaj.getDay();
+    if (licz_dzien==0) {tekst_dzien="Niedziela"}
+    if (licz_dzien==1) {tekst_dzien="Poniedziałek"}
+    if (licz_dzien==2) {tekst_dzien="Wtorek"}
+    if (licz_dzien==3) {tekst_dzien="Środa"}
+    if (licz_dzien==4) {tekst_dzien="Czwartek"}
+    if (licz_dzien==5) {tekst_dzien="Piątek"}
+    if (licz_dzien==6) {tekst_dzien="Sobota"}
+    miesiac=dzisiaj.getMonth();
+    if (miesiac==0) {tekst_miesiac="styczeń"}
+    if (miesiac==1) {tekst_miesiac="luty"}
+    if (miesiac==2) {tekst_miesiac="marzec"}
+    if (miesiac==3) {tekst_miesiac="kwiecień"}
+    if (miesiac==4) {tekst_miesiac="maj"}
+    if (miesiac==5) {tekst_miesiac="czerwiec"}
+    if (miesiac==6) {tekst_miesiac="lipiec"}
+    if (miesiac==7) {tekst_miesiac="sierpień"}
+    if (miesiac==8) {tekst_miesiac="wrzesień"}
+    if (miesiac==9) {tekst_miesiac="październik"}
+    if (miesiac==10) {tekst_miesiac="listopad"}
+    if (miesiac==11) {tekst_miesiac="grudzień"}
+    if (dzien < 10) {dzien="0"+dzien;}
+    if (godzina < 10) {godzina="0"+godzina;}
+    if (minuty < 10) {minuty="0"+minuty;}
+    if (sekundy < 10) {sekundy="0"+sekundy;}
+    pelnyczas=tekst_dzien + ", " + dzien +"&nbsp;"+ tekst_miesiac+"&nbsp;"+ rok +"<br>"+"<br>"
+            + godzina+":"+minuty+":"+sekundy;
+    if (document.layers){
+      document.layers.Data.document.write(pelnyczas)
+      document.layers.Data.document.close()
+    }
+
+    Data.innerHTML=pelnyczas
+    setTimeout("czas()",500)
+  }
+</script>
+<body onload="czas()">
+
+<header>
+    <h4>ROBOTY HUMANOIDALNE: kiedyś vs teraz</h4>
+</header>
+<style>
+    nav,footer {font-family:bradley-hand, cursive;}
+</style>
+<section >
+    <nav>
+        <ul>
+            <li><br><br><a href="mypage.html">Strona główna</a></li><br>
+            <li><a href="roboty.html">Przykłady humanoidów</a></li><br>
+            <li><a href="galeria.html">Galeria</a></li><br><br><br><br><br><br><br><br><br>
+        </ul>
+
+    </nav>
+
+    <article>
+
+        <p align="justify">Idea sztucznych istot kształtowała się już w starożytności. Archytas z Tarentu na przykład, stworzył mechanicznego, potrafiącego latać gołębia.
+            W XV wieku Leonardo da Vinci poszedł o krok dalej tworząc szkic „mechanicznej zbroi”, która miała mieć możliwość poruszania niektórymi częściami ciała.
+            Wraz z upływem czasu i rozwoju m.in. mechaniki oraz robotyki powstawać zaczęły coraz bardziej skomplikowane maszyny, a dwudziestowieczny czeski pisarz Karel Capek zaproponował pojecie „robot”.
+            Za jednego z pierwszych robotów humanoidalnych traktować można zaprojektowanego w 1810 roku przez Friedricha Kaufmanna robota z trąbką.
+            Później powstawały coraz bardziej skomplikowane roboty. Jednym z nich był Elektro, który został zaprojektowany w 1937 roku przez firmę Westinghouse Electric Corporation.
+            Robot ten mógł m.in. przemieszczać się używając dwóch nóg, poruszać kończynami górnymi oraz głową czy też palić papierosy.  Obecnie roboty humanoidalne posiadają coraz więcej kompetencji i umiejętności oraz coraz bardziej przypominają wyglądem ludzi.
+            Znanym przykładem tak zaawansowanych maszyn jest robot humanoidalny Sophia, który oprócz znaczących możliwości sensoryczno-motorycznych, potrafi porozumiewać się z drugą istotą używając mowy, a także posiada obywatelstwo Arabii Saudyjskiej.<br><br>
+            <center>Filmik poniżej przedstawia ewolucje robotów na przestrzeni wieków.</center>
+        </p>
+        <center><video width="550" height="400" controls>
+            <source src="hisrobots.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video></center>
+
+    </article>
+</section>
+<footer>
+    <p><span id="Data" ></span></p>
+</footer>
+</body>
+</html>

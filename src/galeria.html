@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>galeria robotów</title>
+    <link rel="stylesheet" href="plik1.css" >
+</head>
+<script>
+  function czas() {
+    if (!document.write)
+
+      var godzina, minuty, sekundy, dzien, licz_dzien, miesiac, dzisiaj, rok, tekst_miesiac, tekst_dzien;
+    dzisiaj = new Date();
+    godzina=dzisiaj.getHours();
+    minuty=dzisiaj.getMinutes();
+    sekundy=dzisiaj.getSeconds();
+    rok=dzisiaj.getFullYear();
+    dzien=dzisiaj.getDate();
+    licz_dzien=dzisiaj.getDay();
+    if (licz_dzien==0) {tekst_dzien="Niedziela"}
+    if (licz_dzien==1) {tekst_dzien="Poniedziałek"}
+    if (licz_dzien==2) {tekst_dzien="Wtorek"}
+    if (licz_dzien==3) {tekst_dzien="Środa"}
+    if (licz_dzien==4) {tekst_dzien="Czwartek"}
+    if (licz_dzien==5) {tekst_dzien="Piątek"}
+    if (licz_dzien==6) {tekst_dzien="Sobota"}
+    miesiac=dzisiaj.getMonth();
+    if (miesiac==0) {tekst_miesiac="styczeń"}
+    if (miesiac==1) {tekst_miesiac="luty"}
+    if (miesiac==2) {tekst_miesiac="marzec"}
+    if (miesiac==3) {tekst_miesiac="kwiecień"}
+    if (miesiac==4) {tekst_miesiac="maj"}
+    if (miesiac==5) {tekst_miesiac="czerwiec"}
+    if (miesiac==6) {tekst_miesiac="lipiec"}
+    if (miesiac==7) {tekst_miesiac="sierpień"}
+    if (miesiac==8) {tekst_miesiac="wrzesień"}
+    if (miesiac==9) {tekst_miesiac="październik"}
+    if (miesiac==10) {tekst_miesiac="listopad"}
+    if (miesiac==11) {tekst_miesiac="grudzień"}
+    if (dzien < 10) {dzien="0"+dzien;}
+    if (godzina < 10) {godzina="0"+godzina;}
+    if (minuty < 10) {minuty="0"+minuty;}
+    if (sekundy < 10) {sekundy="0"+sekundy;}
+    pelnyczas=tekst_dzien + ", " + dzien +"&nbsp;"+ tekst_miesiac+"&nbsp;"+ rok +"<br>"+"<br>"
+            + godzina+":"+minuty+":"+sekundy;
+    if (document.layers){
+      document.layers.Data.document.write(pelnyczas)
+      document.layers.Data.document.close()
+    }
+
+    Data.innerHTML=pelnyczas
+    setTimeout("czas()",500)
+  }
+</script>
+<body onload="czas()">
+
+<header>
+    <h4>ROBOTY HUMANOIDALNE: galeria</h4>
+</header>
+<style>
+    nav,footer {font-family:bradley-hand, cursive;}
+</style>
+<section >
+    <nav>
+        <ul>
+            <li><br><br><a href="mypage.html">Strona główna</a></li><br>
+            <li><a href="historia.html">Trochę historii</a></li><br>
+            <li><a href="roboty.html">Przykłady humanoidów</a><br><br><br><br><br><br><br><br><br><br><br>
+
+            <li><b><h1><pre><p style="color:#333366;"> POZNAJ <br><br> LEPIEJ <br><br> ROBOTA <br><br> = <br><br> KLIKNIJ <br><br> POSZCZEGÓLNE <br><br>ZDJĘCIE</p></pre></h1></b></li>
+        </ul>
+
+    </nav>
+
+    <article>
+
+        <center><p align="justify">Poniżej znajdują się zdjęcia wybranych robotów humanoidalnych.
+            Więcej informacji na temat poszczególnego humanoida można znaleźć na stronach internetowych, do których można dostać się klikając w poszczególne zdjęcie robota.</p><br>
+        <picture>
+            <source media="(min-width:600px)" srcset="cog.jpg">
+            <a href="http://www.ai.mit.edu/projects/humanoid-robotics-group/cog/cog.html"><img src="cog.jpg" alt="Cog" style="width:245px; style="height=275px;></a>
+        </picture>
+
+        <picture>
+            <source media="(min-width:600px)" srcset="icub.jpg">
+            <a href="https://icub.iit.it/"><img src="icub.jpg" alt="iCub" style="width:245px; style="height=275px;></a>
+        </picture>
+
+        <picture>
+            <source media="(min-width:600px)" srcset="asimo.jpg">
+            <a href="https://asimo.honda.com/"><img src="asimo.jpg" alt="Asimo" style="width:245px; style="height=275px;></a>
+        </picture>
+
+        <picture>
+            <source media="(min-width:600px)" srcset="ameca.jpg">
+            <a href="https://www.engineeredarts.co.uk/robot/ameca/"><img src="ameca.jpg" alt="Ameca" style="width:245px; style="height=275px;></a>
+        </picture>
+
+        <picture>
+            <source media="(min-width:600px)" srcset="atlas.jpg">
+            <a href="https://www.bostondynamics.com/atlas"><img src="atlas.jpg" alt="Atlas" style="width:245px; style="height=275px;></a>
+        </picture>
+
+        <picture>
+            <source media="(min-width:600px)" srcset="pepper.jpg">
+            <a href="https://www.aldebaran.com/en/pepper"><img src="pepper.jpg" alt="Pepper" style="width:245px; style="height=275px;></a>
+        </picture>
+
+        <picture>
+            <source media="(min-width:600px)" srcset="sophia.jpg">
+            <a href="https://www.hansonrobotics.com/sophia/"><img src="sophia.jpg" alt="Sophia" style="width:245px; style="height=275px;></a>
+        </picture>
+
+        <picture>
+            <source media="(min-width:600px)" srcset="valkyrie.jpg">
+            <a href="https://www.nasa.gov/feature/r5/"><img src="valkyrie.jpg" alt="Valkyrie" style="width:245px; style="height=275px;></a>
+        </picture>
+
+        <picture>
+            <source media="(min-width:600px)" srcset="oceanone.jpg">
+            <a href="https://khatib.stanford.edu/ocean-one.html"><img src="oceanone.jpg" alt="Oceanone" style="width:245px; style="height=275px;></a>
+        </picture>
+
+        <picture>
+            <source media="(min-width:600px)" srcset="nao.jpg">
+            <a href="https://www.aldebaran.com/en/nao"><img src="nao.jpg" alt="Nao" style="width:245px; style="height=275px;></a>
+        </picture>
+
+        <picture>
+            <source media="(min-width:600px)" srcset="robonaut2.jpg">
+            <a href="https://www.nasa.gov/robonaut2"><img src="robonaut2.jpg" alt="Robonaut2" style="width:245px; style="height=275px;></a>
+        </picture>
+
+        <picture>
+            <source media="(min-width:600px)" srcset="justin.jpg">
+            <a href="https://www.dlr.de/rm/en/desktopdefault.aspx/tabid-11427/#gallery/35411"><img src="justin.jpg" alt="Justin" style="width:245px; style="height=275px;></a>
+        </picture>
+
+        </center>
+    </article>
+</section>
+<footer>
+    <p><span id="Data" ></span></p>
+</footer>
+</body>
+</html>

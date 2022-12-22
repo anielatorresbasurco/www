@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <title>Strona o robotach</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Author" content="Aniela Torres Basurco" />
+    <link rel="stylesheet" href="plik.css" >
+
+</head>
+
+<script>
+  function czas() {
+    if (!document.write)
+
+      var godzina, minuty, sekundy, dzien, licz_dzien, miesiac, dzisiaj, rok, tekst_miesiac, tekst_dzien;
+    dzisiaj = new Date();
+    godzina=dzisiaj.getHours();
+    minuty=dzisiaj.getMinutes();
+    sekundy=dzisiaj.getSeconds();
+    rok=dzisiaj.getFullYear();
+    dzien=dzisiaj.getDate();
+    licz_dzien=dzisiaj.getDay();
+    if (licz_dzien==0) {tekst_dzien="Niedziela"}
+    if (licz_dzien==1) {tekst_dzien="Poniedziałek"}
+    if (licz_dzien==2) {tekst_dzien="Wtorek"}
+    if (licz_dzien==3) {tekst_dzien="Środa"}
+    if (licz_dzien==4) {tekst_dzien="Czwartek"}
+    if (licz_dzien==5) {tekst_dzien="Piątek"}
+    if (licz_dzien==6) {tekst_dzien="Sobota"}
+    miesiac=dzisiaj.getMonth();
+    if (miesiac==0) {tekst_miesiac="styczeń"}
+    if (miesiac==1) {tekst_miesiac="luty"}
+    if (miesiac==2) {tekst_miesiac="marzec"}
+    if (miesiac==3) {tekst_miesiac="kwiecień"}
+    if (miesiac==4) {tekst_miesiac="maj"}
+    if (miesiac==5) {tekst_miesiac="czerwiec"}
+    if (miesiac==6) {tekst_miesiac="lipiec"}
+    if (miesiac==7) {tekst_miesiac="sierpień"}
+    if (miesiac==8) {tekst_miesiac="wrzesień"}
+    if (miesiac==9) {tekst_miesiac="październik"}
+    if (miesiac==10) {tekst_miesiac="listopad"}
+    if (miesiac==11) {tekst_miesiac="grudzień"}
+    if (dzien < 10) {dzien="0"+dzien;}
+    if (godzina < 10) {godzina="0"+godzina;}
+    if (minuty < 10) {minuty="0"+minuty;}
+    if (sekundy < 10) {sekundy="0"+sekundy;}
+    pelnyczas=tekst_dzien + ",<br>" + dzien +"&nbsp;"+ tekst_miesiac+"&nbsp;"+rok+"<br>"+"<br>"+"<br>"
+            + godzina+":"+minuty+":"+sekundy;
+    if (document.layers){
+      document.layers.Data.document.write(pelnyczas)
+      document.layers.Data.document.close()
+    }
+
+    Data.innerHTML=pelnyczas
+    setTimeout("czas()",500)
+  }
+</script>
+<body onload="czas()">
+<header>
+    <h2>ROBOTY HUMANOIDALNE</h2>
+</header>
+<style>
+    nav {font-family:bradley-hand, cursive;}
+</style>
+<section >
+    <nav>
+        <ul>
+            <li><br><br><a href="historia.html">Trochę historii</a></li><br>
+            <li><a href="roboty.html">Przykłady humanoidów</a></li><br>
+            <li><a href="galeria.html">Galeria</a></li><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        </ul>
+        <span id="Data" ></span>
+    </nav>
+
+    <article>
+        <h2><center>O robotach...</center></h2>
+        <p align="justify"> Roboty usprawniają pracę w obrębie wielu obszarów tj. rolnictwo, przemył, budownictwo. Coraz częściej spotkać można je w branży rozrywkowej czy medycznej.
+            Istnieje zatem wiele środowisk, w których okazują się one być przydatne.<br><br>
+            W dzisiejszych czasach zaobserwować można zasługi robotów mobilnych, które ze względu na swoją specyfikę — możliwość samodzielnego poruszania się — sprawdzają się m. in. w badaniu rożnego rodzaju środowisk w skrajnie trudnych warunkach.
+            Ich autonomiczność jest ważnym komponentem w trakcie poznawania rzeczywistości, wykonywaniu określonych zadań czy nauce nowych umiejętności.<br>
+            Roboty humanoidalne (inaczej: humanoidy) to autonomiczne roboty mobile, które wyróżnia specyficzny wygląd zewnętrzny oraz architektura wewnętrzna.
+            Są one budowane po to, by jak najwierniej odwzorowywać człowieka (pod względem wizualnym i „umysłowym”), jego kompetencje, zdolności oraz przyczyniać się do rozwoju badań nad sztuczną inteligencją.  Wygląd zewnętrzny robotów ma być jak najbardziej zbliżony do budowy fizycznej człowieka.
+            Istnieje wiele robotów humanoidalnych, które mają różne kształty, rozmiary, posiadają zdolność do poruszania się w rożny sposób (np. przy użyciu dwóch kończyn dolnych albo kół) oraz przejawiają rożnego rodzaju kompetencje przypisywane ludziom np. możliwość manipulacji przedmiotami, wyrażanie emocji czy też używanie języka.</p>
+
+
+        <picture>
+            <source media="(min-width:600px)" srcset="tesla.jpg">
+            <img src="tesla.jpg" alt="Teslabot" style="width:1000px; style="height=400px;>
+        </picture>
+
+
+
+
+    </article>
+
+</section>
+<style>
+    footer {font-family:bradley-hand, cursive;}
+</style>
+
+<footer>
+
+    <p><div>
+    <form action="" method="get" target="">
+        <p>Zapisz się i bądź na bieżąco!</p>
+        <label for="fname">Imię</label>
+        <input type="text" id="fname" name="imie" placeholder="Twoje imię..">
+
+        <label for="lname">Nazwisko</label>
+        <input type="text" id="lname" name="nazwisko" placeholder="Twoje nazwisko..">
+
+        <label for="country">Kraj</label>
+        <select id="country" name="country">
+            <option value="australia">Australia</option>
+            <option value="kanada">Kanada</option>
+            <option value="usa">USA</option>
+            <option value="polska">Polska</option>
+            <option value="holandia">Holandia</option>
+            <option value="hiszpania">Hiszpania</option>
+            <option value="ukraina">Ukraina</option>
+            <option value="francja">Francja</option>
+            <option value="portugalia">Portugalia</option>
+            <option value="rosja">Rosja</option>
+            <option value="argentyna">Argentyna</option>
+            <option value="chiny">Chiny</option>
+            <option value="japonia">Japonia</option>
+            <option value="tajlandia">Tajlandia</option>
+            <option value="arabia saudyjska">Arabia Saudyjska</option>
+            <option value="austria">Austria</option>
+            <option value="belgia">Belgia</option>
+            <option value="białoruś">Białoruś</option>
+            <option value="chorwacja">Chorwacja</option>
+            <option value="cypr">Cypr</option>
+            <option value="czechy">Czechy</option>
+            <option value="dania">Dania</option>
+            <option value="egipt">Egipt</option>
+            <option value="estonia">Estonia</option>
+            <option value="grecja">Grecja</option>
+            <option value="irak">Irak</option>
+            <option value="iran">Iran</option>
+            <option value="irlandia">Irlandia</option>
+            <option value="korean północna">Korea Północna</option>
+            <option value="korea południowa">Korea Południowa</option>
+            <option value="litwa">Litwa</option>
+            <option value="łotwa">Łotwa</option>
+        </select>
+
+        <input type="submit" value="Zapisz się">
+    </form>
+</div></p>
+</footer>
+
+</body>
+</html>
